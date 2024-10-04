@@ -1,34 +1,52 @@
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Displacement",
-    "anchor": "start",
-    "subtitle": "Internally Displaced Persons | UNHCR via ECO-API",
-    "fontSize": "14",
-    "subtitleFontSize": "12",
-    "color": "#000000",
-    "subtitleColor": "#000000"
-  },
-  "height": "250",
-  "width": "container",
-  "autosize": {"type": "fit", "contains": "padding", "resize": false},
-  "background": "#ffffff",
-  "view": {"fill": "#ffffff", "strokeOpacity": 0},
-  "data": {
-    "url": "https://api.economicsobservatory.com/tur/displ?vega",
-    "format": {"type": "json"}
-  },
-  "mark": {"type": "area", "color": "#f4134d", "strokeWidth": "2"},
-  "encoding": {
-    "x": {
-      "field": "date",
-      "type": "temporal",
-      "axis": {"title": "", "titleColor": "#122B39", "grid": false}
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "description": "Various US measures state by state",
+  
+    "title": {
+      "text": "Gun deaths and income - US states",
+      "subtitle":["Median income (x), and firearm deaths per 100k population (y)",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
     },
-    "y": {
-      "field": "value",
-      "type": "quantitative",
-      "axis": {"title": "", "titleColor": "#122B39", "grid": false}
-    }
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/usa/data_USsocioEconomic.csv",
+      "format":{"type":"csv"}},
+  
+    "mark": {
+      "type":"circle",
+      "size":150,
+      "color":"rgb(0,67,167)",
+      "opacity":0.6},
+    
+    "height": 300,
+    "width": 250,
+  
+    "encoding": {
+      "x": {
+        "field": "medIncome", 
+        "type": "quantitative",
+        "scale": {"domain": [40000, 80000]},
+        "title":null},
+  
+      "y": {
+        "field": "FirearmDeaths", 
+        "type": "quantitative",
+        "title":null},
+  
+      "color": {
+        "field": "GeographicDivision", 
+        "type": "ordinal",
+        "scale": {"scheme": "set1"},
+        "legend": {"orient":"bottom"},
+        "title":null},
+  
+      "size": {
+        "field": "PrisonRate", 
+        "type": "quantitative",
+        "title":"Prison Rate",
+        "scale": { "range": [5, 300]}}
+     }
   }
-}
