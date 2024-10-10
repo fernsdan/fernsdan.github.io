@@ -68,7 +68,7 @@
 
 <section>
         <div class="chart-description">
-            <h3>This is a continuation of the first challenge...</h3>
+            <h3>Section 3: More stuff!</h3>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 This is the second chart I embedded.
             </p>
@@ -78,23 +78,32 @@
 
  <section>
         <div class="chart-description">
-            <h2>Self practice</h2>
+            <h2>Coding challenge two</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                Here are two charts I created using Vega Editor :)
+                Here are two charts I created using the Economics Observatory Data Hub
             </p>
         </div>
     </section>
-    
-<section>
+
+       <section>
         <div class="chart-description">
-            <h3> Words </h3>
+            <h3>Mexico energy production </h3>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                This word cloud depicts frequency of words in a text.
+                This one shows renewable energy output in Mexico:
             </p>
         </div>
-        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Mexico1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
-    
+
+    <section>
+        <div class="chart-description">
+            <h3>Mexico energy production pt.2 </h3>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                This one shows nuclear energy output in Mexico:
+            </p>
+        </div>
+        <figure id="Mexico2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
     
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
@@ -108,7 +117,9 @@
 
         let figure_1_spec = "test_chart.json";
         let figure_2_spec = "test_chart2.json";
-        let figure_3_spec = "wordcloud.vg.json"                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+        let figure_3_spec = "portfolio2_mexico_energy1.json";
+        let figure_4_spec = "portfolio2_mexico_energy2.json";
+                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
 
       
         // Do you want to add more graphs?
@@ -119,7 +130,8 @@
 
         vegaEmbed('#Location1', figure_1_spec)
         vegaEmbed('#Location2', figure_2_spec)
-        vegaEmbed('#Location3', figure_3_spec)
+        vegaEmbed('#Mexico1', figure_3_spec)
+        vegaEmbed('#Mexico2', figure_4_spec)
 
 
     </script>
