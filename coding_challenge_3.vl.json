@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Google's stock price over time.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/CC3.csv"
+  },
+  "mark": {"type": "line", "color": "slategray"},
+  "title": {
+    "text": "Coal production in the UK",
+    "anchor": "start",
+    "subtitle": "Output, million metric tonnes | Source: Department for Energy Security and Net Zero",
+    "fontSize": "20",
+    "subtitleFontSize": "9",
+    "color": "#000000b5",
+    "subtitleColor": "#000000"
+  },
+  "encoding": {
+    "x": {
+      "field": "Year ",
+      "type": "temporal",
+      "axis": {"title": "", "grid": false}
+    },
+    "y": {
+      "field": "Output",
+      "type": "quantitative",
+      "axis": {"title": "", "grid": false}
+    }
+  },
+  "config": {}
+}
