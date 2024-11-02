@@ -16,6 +16,12 @@
     "color": "#000000b5",
     "subtitleColor": "#000000"
   },
+
+"transform": [
+  {"calculate": "toNumber(datum['Jobs'])", "as": "Jobs_numeric"}
+],
+
+  
   "encoding": {
     "x": {
       "field": "Year ",
