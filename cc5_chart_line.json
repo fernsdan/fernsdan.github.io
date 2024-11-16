@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Google's stock price over time.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/CC5_data.csv"
+  },
+  "height": 300,
+  "width": 300,
+  "title": {
+    "text": "Foreign-born population in the UK over time",
+    "subtitle": "Source: Census/ONS (scrapped from Wikipedia)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "mark": {
+    "type": "line",
+    "point": "true",
+    "color": "darkcyan",
+    "tooltip": {"content": "encoding"}
+  },
+  "encoding": {
+    "x": {
+      "field": "Census year",
+      "type": "temporal",
+      "axis": {"title": "Year", "grid": false}
+    },
+    "y": {
+      "field": "Foreign-born population",
+      "type": "quantitative",
+      "axis": {"title": null, "format": ".2s"}
+    }
+  },
+  "config": {}
+}
