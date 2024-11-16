@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"category": "Two Year", "group": "01/12/2021", "value": 0.023},
+      {"category": "Two Year", "group": "23/09/2022", "value": 0.047},
+      {"category": "Two Year", "group": "03/10/2022", "value": 0.058},
+      {"category": "Five Year", "group": "01/12/2021", "value": 0.028},
+      {"category": "Five Year", "group": "23/09/2022", "value": 0.0465},
+      {"category": "Five Year", "group": "03/10/2022", "value": 0.055}
+    ]
+  },
+  "mark": {"type": "bar", "width": 50},
+  "width": 400,
+  "height": 200,
+  "title": {
+    "text": "How mortage rates have risen this year",
+    "subtitle": "Average interest charged on two and five-year fixed deals",
+    "fontSize": 17,
+    "subtitleFontSize": 12,
+    "color": "#1E1E1E",
+    "subtitleColor": "#616161",
+    "anchor": "start",
+    "font": "Cambria",
+    "subtitleFont": "Calibri"
+  },
+  "encoding": {
+    "x": {
+      "field": "category",
+      "title": "",
+      "axis": {
+        "labelAngle": 0,
+        "labelColor": "#939295",
+        "tickColor": "#939295",
+        "domainColor": "#939295",
+        "gridColor": "#939295"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "labelColor": "#939295",
+        "tickColor": "#939295",
+        "domainColor": "#939295",
+        "gridColor": "#939295",
+        "domain": false,
+        "format": "%"
+      },
+      "title": ""
+    },
+    "xOffset": {"field": "group"},
+    "color": {
+      "field": "group",
+      "scale": {
+        "domain": ["01/12/2021", "23/09/2022", "03/10/2022"],
+        "range": ["#A1CDD9", "#4BA7BC", "#137FA2"]
+      },
+      "legend": {
+        "orient": "top",
+        "title": null,
+        "labelColor": "#616161",
+        "labelFont": "Calibri"
+      }
+    }
+  },
+  "config": {}
+}
