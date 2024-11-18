@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 300,
+  "width": 400,
+  "title": "London foreign-bor population",
+  "subtitle": "Shown as percentage of each borough",
+  "projection": {"type": "identity"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/london-boroughs.geojson",
+        "format": {"feature": "geojson", "property": "features"}
+      },
+      "mark": {"type": "geoshape"},
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/CC7_london_pop.csv"
+            },
+            "key": "Borough",
+            "fields": ["Value 2021"]
+          }
+        }
+      ],
+      "encoding": {
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "Borough"},
+          {"field": "Value 2021", "type": "quantitative", "title": "Percent"}
+        ],
+        "color": {
+          "field": "Value 2021",
+          "type": "quantitative",
+          "scale": {"scheme": "yellowgreenblue", "domain": [0, 60]}
+        }
+      }
+    }
+  ],
+  "config": {}
+}

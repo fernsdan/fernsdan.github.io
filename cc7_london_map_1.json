@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 400,
+  "widht": 600,
+  "title": "The London boroughs",
+  "projection": {"type": "identity"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/london-boroughs.geojson",
+        "format": {"feature": "geojson", "property": "features"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgoldenrodyellow",
+        "stroke": "black",
+        "strokeWidth": 0.3
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "Borough"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
