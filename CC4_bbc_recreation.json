@@ -50,7 +50,6 @@
       "title": ""
     },
     "xOffset": {"field": "group"},
-   
     "color": {
       "field": "group",
       "scale": {
