@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"category": "Two Year", "group": "01/12/2021", "value": 0.023},
+      {"category": "Two Year", "group": "23/09/2022", "value": 0.047},
+      {"category": "Two Year", "group": "3/10/2022", "value": 0.058},
+      {"category": "Five Year", "group": "01/12/2021", "value": 0.028},
+      {"category": "Five Year", "group": "23/09/2022", "value": 0.0465},
+      {"category": "Five Year", "group": "3/10/2022", "value": 0.055}
+    ]
+  },
+  "facet": {
+    "field": "category",
+    "type": "nominal",
+    "title": null,
+    "header": {
+      "labelExpr": "datum.value === 'Two Year' ? 'Two Year fixed deals' : 'Five Year fixed deals'",
+      "labelFontSize": 14,
+      "labelColor": "#1c1c1c",
+      "labelFont": "Calibri"
+    }
+  },
+  "spec": {
+    "width": 200,
+    "height": 200,
+    "mark": {"type": "point", "filled": true, "size": 100},
+    "encoding": {
+      "x": {
+        "field": "group",
+        "type": "ordinal",
+        "title": null,
+        "axis": {
+          "labelAngle": 0,
+          "labelColor": "#939295",
+          "tickColor": "#939295",
+          "domainColor": "#939295",
+          "grid": false
+        },
+        "scale": {"domain": ["01/12/2021", "23/09/2022", "3/10/2022"]}
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": null,
+        "axis": {
+          "labelColor": "#939295",
+          "tickColor": "#939295",
+          "domainColor": "#939295",
+          "gridColor": "#939295",
+          "format": "%"
+        },
+        "scale": {"domain": [0, 0.2]}
+      },
+      "color": {
+        "field": "category",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Two Year", "Five Year"],
+          "range": ["#4BA7BC", "#137FA2"]
+        },
+        "legend": null
+      }
+    }
+  },
+  "resolve": {"scale": {"x": "independent"}},
+  "config": {"facet": {"spacing": 20}, "view": {"stroke": "transparent"}}
+}
