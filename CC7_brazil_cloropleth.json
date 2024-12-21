@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 300,
+  "width": 400,
+  "title": "The states of Brazil",
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/brazil_geo.json",
+        "format": {"feature": "geojson", "property": "features"}
+      },
+      "mark": {"type": "geoshape", "stroke": "darkcyan", "strokeWidth": 1},
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/brazil_density.csv"
+            },
+            "key": "State",
+            "fields": ["Density"]
+          }
+        }
+      ]
+    }
+  ],
+  "encoding": {
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "State"},
+      {
+        "field": "Density",
+        "type": "quantitative",
+        "title": "Population density"
+      }
+    ],
+    "color": {
+      "field": "Density",
+      "type": "quantitative",
+      "scale": {
+        "range": ["#90EE90", "green", "yellow", "orange", "brown"],
+        "domain": [0, 510]
+      }
+    }
+  },
+  "config": {}
+}
