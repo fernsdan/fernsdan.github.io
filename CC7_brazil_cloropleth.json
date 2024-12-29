@@ -10,7 +10,7 @@
         "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/brazil_geo.json",
         "format": {"feature": "geojson", "property": "features"}
       },
-      "mark": {"type": "geoshape", "stroke": "darkcyan", "strokeWidth": 1},
+      "mark": {"type": "geoshape", "stroke": "#154084", "strokeWidth": 1},
       "transform": [
         {
           "lookup": "properties.name",
@@ -38,7 +38,7 @@
       "field": "Density",
       "type": "quantitative",
       "scale": {
-        "range": ["#90EE90", "green", "yellow", "orange", "brown"],
+        "range": ["lightgrey", "green", "yellow", "orange", "brown"],
         "domain": [0, 510]
       }
     }
