@@ -56,7 +56,14 @@
       }
     }
   ],
-  "transform": [{"filter": "datum['Year'] == selectedYear"}],
+  "transform": [{"filter": "datum['Year'] == selectedYear"}, {
+      "filter": "datum['Prosperity_Index'] <= 100 && datum['Value_x'] <= 100000"  
+    },
+    {
+      "filter": "datum['Year'] != null" 
+    }],
+
+  
   "params": [
     {
       "name": "selectedYear",
@@ -95,5 +102,5 @@
       }
     }
   ],
-  "config": {}
+  "config": {"background": "#EDEDED"  }
 }
