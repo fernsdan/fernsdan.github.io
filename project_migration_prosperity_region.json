@@ -58,5 +58,5 @@
       }
     ]
   },
-  "config": {"axis": {"labelFontSize": 12, "titleFontSize": 14}}
+  "config": {"axis": {"labelFontSize": 12, "titleFontSize": 14}, "background": "#EDEDED"}
 }
