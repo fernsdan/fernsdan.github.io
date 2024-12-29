@@ -31,7 +31,7 @@
     "color": {
       "field": "Income_group",
       "type": "nominal",
-      "legend": {"title": "Region"},
+      "legend": {"title": "Income classification"},
       "scale": {
         "domain": [
           "High income",
