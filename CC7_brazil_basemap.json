@@ -23,5 +23,7 @@
       {"field": "properties.name", "type": "nominal", "title": "State"}
     ]
   },
-  "config": {}
+  "config": {
+    "background": "#EDEDED"
+  }
 }
