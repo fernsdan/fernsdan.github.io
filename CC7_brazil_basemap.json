@@ -12,8 +12,8 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "ghostwhite",
-        "stroke": "darkcyan",
+        "fill": "#EDEDED",
+        "stroke": "#154084",
         "strokeWidth": 1
       }
     }
