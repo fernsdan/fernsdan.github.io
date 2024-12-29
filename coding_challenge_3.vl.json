@@ -30,5 +30,5 @@
       "axis": {"title": "", "grid": false}
     }
   },
-  "config": {}
+  "config": {"background": "#EDEDED"}
 }
