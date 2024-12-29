@@ -64,5 +64,5 @@
     }
   },
   "resolve": {"scale": {"x": "independent"}},
-  "config": {"facet": {"spacing": 20}, "view": {"stroke": "transparent"}}
+  "config": {"facet": {"spacing": 20}, "view": {"stroke": "transparent"},"background": "#EDEDED"}
 }
