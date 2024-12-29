@@ -31,5 +31,5 @@
       "axis": {"title": null, "format": ".2s"}
     }
   },
-  "config": {}
+  "config": {"background": "#EDEDED"}
 }
