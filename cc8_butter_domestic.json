@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Explorations with the price of butter in the UK!",
+  "data": {
+    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/butter_domestic.csv"
+  },
+  "height": 300,
+  "width": 600,
+  "title": {
+    "text": "Price of imported butter in the UK",
+    "subtitle": "Data source: Davies, R (2021) “Prices and inflation in the UK – A new dataset”",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "transform": [
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "values": [
+            {"id": "UKI", "region_name": "London"},
+            {"id": "UKJ", "region_name": "South East"},
+            {"id": "UKK", "region_name": "South west"},
+            {"id": "UKH", "region_name": "East Anglia"},
+            {"id": "UKF", "region_name": "East Midlands"},
+            {"id": "UKG", "region_name": "West Midlands"},
+            {"id": "UKE", "region_name": "Yorkshire & Humber"},
+            {"id": "UKD", "region_name": "North West"},
+            {"id": "UKC", "region_name": "North"},
+            {"id": "UKL", "region_name": "Wales"},
+            {"id": "UKM", "region_name": "Scotland"},
+            {"id": "UKN", "region_name": "Northern Ireland"}
+          ]
+        },
+        "key": "id",
+        "fields": ["region_name"]
+      }
+    }
+  ],
+  "mark": {"type": "line", "tooltip": {"content": "encoding"}},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "timeUnit": "year",
+      "axis": {"title": null, "grid": false}
+    },
+    "y": {
+      "field": "price",
+      "type": "quantitative",
+      "axis": {"title": "Price", "labelExpr": "'£' + datum.value"}
+    },
+    "color": {
+      "field": "region_name",
+      "type": "nominal",
+      "title": "Region",
+      "scale": {"scheme": "paired"}
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "type": "temporal",
+        "title": "Year",
+        "timeFormat": "%Y"
+      },
+      {"field": "region_name", "type": "nominal", "title": "Region"},
+      {
+        "field": "price",
+        "type": "quantitative",
+        "title": "Price (£)",
+        "format": ".2f"
+      }
+    ]
+  },
+  "config": {}
+}

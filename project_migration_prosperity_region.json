@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Prosperity Index vs. Net Migrationin 2023",
+  "data": {
+    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/migration_prosperity.csv"
+  },
+  "height": 400,
+  "width": 600,
+  "title": {
+    "text": "Prosperity Index vs. Net Migration for Afghanistan in 2023",
+    "subtitle": "Data sources: World Bank and the Freedom and Prosperity Center (Atlantic Council)"
+  },
+  "mark": "circle",
+  "transform": [
+    {"filter": "datum['Year'] == 2023"},
+    {"filter": "datum['Prosperity_Index'] != null && datum['Value'] != null"}
+  ],
+  "selection": {"grid": {"type": "interval", "bind": "scales"}},
+  "encoding": {
+    "y": {
+      "field": "Prosperity_Index",
+      "type": "quantitative",
+      "scale": {"domain": [0, 100]},
+      "axis": {"title": "Prosperity Index"}
+    },
+    "x": {
+      "field": "Value",
+      "type": "quantitative",
+      "axis": {"title": "Net Migration"}
+    },
+    "color": {
+      "field": "Income_group",
+      "type": "nominal",
+      "legend": {"title": "Region"},
+      "scale": {
+        "domain": [
+          "High income",
+          "Upper middle income",
+          "Lower middle income",
+          "Low income"
+        ],
+        "range": ["#d73027", "#fc8d59", "#91bfdb", "#4575b4"]
+      }
+    },
+    "tooltip": [
+      {"field": "Country Name", "type": "nominal", "title": "Country"},
+      {
+        "field": "Prosperity_Index",
+        "type": "quantitative",
+        "title": "Prosperity Index",
+        "format": ".3g"
+      },
+      {
+        "field": "Value",
+        "type": "quantitative",
+        "title": "Net Migration",
+        "format": ",.0f"
+      }
+    ]
+  },
+  "config": {"axis": {"labelFontSize": 12, "titleFontSize": 14}}
+}
