@@ -48,7 +48,7 @@
       }
     },
     {
-      "mark": {"type": "line", "color": "#222222"},
+      "mark": {"type": "line", "color": "#154084", "clip": true},
       "transform": [{"regression": "Value_x", "on": "Prosperity_Index"}],
       "encoding": {
         "x": {"field": "Value_x", "type": "quantitative"},
