@@ -43,5 +43,7 @@
       }
     }
   },
-  "config": {}
+  "config": {
+    "background": "#EDEDED"
+  }
 }
