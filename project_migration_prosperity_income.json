@@ -7,7 +7,7 @@
   "height": 400,
   "width": 600,
   "title": {
-    "text": "Prosperity Index vs. Net Migration by country in 2023",
+    "text": "Prosperity Index vs. Net Migration in 2023, filtered by GDP per capita",
     "subtitle": "Data sources: World Bank and the Freedom and Prosperity Center (Atlantic Council)"
   },
   "mark": "circle",
@@ -39,7 +39,7 @@
           "Lower middle income",
           "Low income"
         ],
-        "range": ["#d73027", "#fc8d59", "#91bfdb", "#4575b4"]
+        "range": ["#74A466","#154084","#dc4424", "#9D2719"]
       }
     },
     "tooltip": [
@@ -55,6 +55,12 @@
         "type": "quantitative",
         "title": "Net Migration",
         "format": ",.0f"
+      },
+            {
+        "field": "Income",
+        "type": "quantitative",
+        "title": "GDP per capita score",
+        "format": ".3g"
       }
     ]
   },
