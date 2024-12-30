@@ -19,7 +19,7 @@
               "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/brazil_density.csv"
             },
             "key": "State",
-            "fields": ["Population density"]
+            "fields": ["Density"]
           }
         }
       ]
