@@ -92,5 +92,5 @@
       }
     }
   ],
-  "config": {}
+  "config": {"background": "#EDEDED"}
 }
