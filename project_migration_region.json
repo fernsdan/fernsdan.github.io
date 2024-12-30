@@ -1,27 +1,27 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Prosperity Index vs. Net Migrationin 2023",
+  "description": "Freedom vs. Net Migrationin 2023",
   "data": {
     "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/migration_prosperity.csv"
   },
   "height": 400,
   "width": 600,
   "title": {
-    "text": "Prosperity Index vs. Net Migration in 2023, filtered by region",
+    "text": "Freedom Index vs. Net Migration in 2023, filtered by region",
     "subtitle": "Data sources: World Bank and the Freedom and Prosperity Center (Atlantic Council)"
   },
   "mark": {"type": "circle", "opacity": 1},
   "transform": [
     {"filter": "datum['Year'] == 2023"},
-    {"filter": "datum['Prosperity_Index'] != null && datum['Value'] != null"}
+    {"filter": "datum['Freedom_Index'] != null && datum['Value'] != null"}
   ],
   "selection": {"grid": {"type": "interval", "bind": "scales"}},
   "encoding": {
     "y": {
-      "field": "Prosperity_Index",
+      "field": "Freedom_Index",
       "type": "quantitative",
       "scale": {"domain": [0, 100]},
-      "axis": {"title": "Prosperity Index"}
+      "axis": {"title": "Freedom Index"}
     },
     "x": {
       "field": "Value",
@@ -47,9 +47,9 @@
     "tooltip": [
       {"field": "Country Name", "type": "nominal", "title": "Country"},
       {
-        "field": "Prosperity_Index",
+        "field": "Freedom_Index",
         "type": "quantitative",
-        "title": "Prosperity Index",
+        "title": "Freedom Index",
         "format": ".3g"
       },
       {
