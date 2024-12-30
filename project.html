@@ -54,6 +54,7 @@
             <h2>Income</h2>
             <p>The first variable that came to mind was income, which is included in the prosperity index calculations but not in the freedom index. How much, if anything, does GDP per capita inform about a nation's freedom? I created a scatterplot to visualize this and added a regression line to see the general direction of the relationship. Of course, any econometric claims would require much more careful analysis, but it's not unlikely that income is correlated with trade, bureaucracy or property rights, for example -- all of which are captured by the freedom index.</p>
         </div>
+        <figure id="project5"></figure>
             
         <div class="chart-description">
             <h2>Migration</h2>
@@ -80,11 +81,13 @@
         let figure_2_spec = "project_prosperity_selector.json";
         let figure_3_spec = "project_migration_region.json";
         let figure_4_spec = "project_migration_prosperity_income.json";
+        let figure_5_spec = "project_income_prosperity.json";
 
         vegaEmbed('#project1', figure_1_spec)
         vegaEmbed('#project2', figure_2_spec)
         vegaEmbed('#project3', figure_3_spec)
-        vegaEmbed('#project4', figure_4_spec)     
+        vegaEmbed('#project4', figure_4_spec)  
+        vegaEmbed('#project5', figure_5_spec)  
 
 
 
