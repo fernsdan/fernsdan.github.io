@@ -48,7 +48,7 @@
       }
     },
     {
-      "mark": {"type": "line", "color": "#154084", "clip": true},
+      "mark": {"type": "line", "color": "#222222"},
       "transform": [{"regression": "Value_x", "on": "Prosperity_Index"}],
       "encoding": {
         "x": {"field": "Value_x", "type": "quantitative"},
@@ -56,14 +56,7 @@
       }
     }
   ],
-  "transform": [{"filter": "datum['Year'] == selectedYear"}, {
-      "filter": "datum['Prosperity_Index'] <= 100 && datum['Value_x'] <= 100000"  
-    },
-    {
-      "filter": "datum['Year'] != null" 
-    }],
-
-  
+  "transform": [{"filter": "datum['Year'] == selectedYear"}],
   "params": [
     {
       "name": "selectedYear",
@@ -102,5 +95,5 @@
       }
     }
   ],
-  "config": {"background": "#EDEDED"  }
+  "config": {}
 }
