@@ -51,12 +51,22 @@
         <figure id="project2"></figure>
 
         <div class="chart-description">
-            <h2>Visualising freedom and prosperity: an exploration</h2>
-            <p> I</p>
+            <h2>Income</h2>
+            <p>The first variable that came to mind was income: how much does GDP per capita inform about a nation's prosperity and freedom? I created a scatterplot to visualize this, and added a regression line to see the general direction of relationship. Of course, any econometric claims would require much more careful analysis, but it's not unlikely that income influences more than one area of analysis that was used in the index methodology.</p>
         </div>
             
+        <div class="chart-description">
+            <h2>Migration</h2>
+            <p>The 'hypothesis' behind creating this chart is that so-called 'freer' and more prosperous countries would attract more people who want to migrate. Since migration data is imperfect, and there are several reasons why a person would become a migrant (from conflict and refuge to economic-related reasons), the relationship wasn't immediately obvious:</p>
+        </div>
+
+        <figure id="project3"></figure>
             
-            <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+         <p>When I added an income filter instead, a clearer picture emerged:</p>
+
+        <figure id="project4"></figure>
+
+            
     </section>
 
 
@@ -68,21 +78,13 @@
 
         let figure_1_spec = "project_freedom_selector.json";
         let figure_2_spec = "project_prosperity_selector.json";
-
-
-        
-
-                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-
-      
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
-        // let figure_3_spec = ...
-        // vegaEmbed('#Location3', figure_3_spec)
+        let figure_3_spec = "project_migration_region.json";
+        let figure_4_spec = "project_migration_prosperity_income.json";
 
         vegaEmbed('#project1', figure_1_spec)
         vegaEmbed('project2', figure_2_spec)
+        vegaEmbed('project3', figure_3_spec)
+        vegaEmbed('project4', figure_3_spec)     
 
 
 
