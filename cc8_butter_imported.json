@@ -8,7 +8,7 @@
   "width": 600,
   "title": {
     "text": "Price of imported butter in the UK",
-    "subtitle": "Data source: Davies (2021)",
+    "subtitle": "Data source: Davies, R (2021) “Prices and inflation in the UK – A new dataset”",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start"
