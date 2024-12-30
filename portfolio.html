@@ -200,9 +200,10 @@
                         <section>
         <div class="chart-description">
             <h2>CC10.2: Interactive visualisation</h2>
-            <p>These charts continue an exploration of the Freedom and Prosperity Indexes, but are not used in my project. In the first one, the user can use dropdown menu to select a year to visualise data.</p>
+            <p>These charts continue an exploration of the Freedom and Prosperity Indexes; only the second one is used in my project. In the first one, the user can use dropdown menu to select a year to visualise data. The second allows the user to select a country to view in detail and compares its index to world regions.</p>
        
     <figure id="CC10_1"></figure>
+     <figure id="CC10_2"></figure>
             
         </div>
     </section>
@@ -233,6 +234,7 @@
         let figure_15_spec = "project_income_prosperity.json";
         let figure_16_spec = "project_migration_prosperity_income.json";
         let figure_17_spec = "cc10_chart1.json";
+        let figure_18_spec = "project_freedom_selector.json"
 
         
 
@@ -261,6 +263,7 @@
         vegaEmbed('#Project1',figure_15_spec)
         vegaEmbed('#Project2',figure_16_spec)
         vegaEmbed('#CC10_1',figure_17_spec)
+        vegaEmbed('#CC10_2',figure_18_spec)
 
 
     </script>
