@@ -2,7 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 300,
   "width": 400,
-  "title": "The states of Brazil",
+  "title": "Population density of Brazil",
+  "subTitle": "Source: IBGE",
   "projection": {"type": "mercator"},
   "layer": [
     {
@@ -19,7 +20,7 @@
               "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/brazil_density.csv"
             },
             "key": "State",
-            "fields": ["Density"]
+            "fields": ["Population density"]
           }
         }
       ]
