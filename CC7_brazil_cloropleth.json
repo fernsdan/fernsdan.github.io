@@ -2,7 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 300,
   "width": 400,
-  "title": "Population density of Brazil. Source: IBGE",
+  "title": {"text":"Population density of Brazil",
+  "subtitle":"Source: IBGE",
+  "anchor": "middle"},
   "projection": {"type": "mercator"},
   "layer": [
     {
@@ -40,6 +42,9 @@
       "scale": {
         "range": ["lightgrey", "green", "yellow", "orange", "brown"],
         "domain": [0, 510]
+      },
+      "legend": {
+        "title": ["Population Density", "(hab/km²)"]
       }
     }
   },
