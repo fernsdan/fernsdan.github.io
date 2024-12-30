@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Income and the prosperity index",
+  "description": "Income and the freedom index",
   "title": {
-    "text": "Income and prosperity",
-    "subtitle": ["Prosperity Index and GDP per capita by country (in current US$).", "Source: World Bank, Atlantic Council"],
+    "text": "Income and the Freedom Index",
+    "subtitle": ["Freedom Index and GDP per capita by country (in current US$).", "Source: World Bank, Atlantic Council"],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -25,7 +25,7 @@
           "scale": {"domain": [0, 100000]}
         },
         "y": {
-          "field": "Prosperity_Index",
+          "field": "Freedom_Index",
           "type": "quantitative",
           "title": null,
           "scale": {"domain": [0, 100]}
@@ -39,9 +39,9 @@
             "format": "$,.0f"
           },
           {
-            "field": "Prosperity_Index",
+            "field": "Freedom_Index",
             "type": "quantitative",
-            "title": "Prosperity Index",
+            "title": "Freedom Index",
             "format": ".3g"
           }
         ]
@@ -49,10 +49,10 @@
     },
     {
       "mark": {"type": "line", "color": "#222222"},
-      "transform": [{"regression": "Value_x", "on": "Prosperity_Index"}],
+      "transform": [{"regression": "Value_x", "on": "Freedom_Index"}],
       "encoding": {
         "x": {"field": "Value_x", "type": "quantitative"},
-        "y": {"field": "Prosperity_Index", "type": "quantitative"}
+        "y": {"field": "Freedom_Index", "type": "quantitative"}
       }
     }
   ],
