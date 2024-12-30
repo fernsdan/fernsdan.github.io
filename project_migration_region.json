@@ -1,37 +1,65 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Freedom vs. Net Migrationin 2023",
+  "description": "Freedom vs. Net Migration in 2023",
   "data": {
-    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/migration_prosperity.csv"
+    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/migration_prosperity.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Freedom_Index": "number",  
+        "Prosperity_Index": "number",
+        "Value": "number"            
+      }
+    }
   },
   "height": 400,
   "width": 600,
   "title": {
-    "text": "Freedom Index vs. Net Migration in 2023, filtered by region",
-    "subtitle": "Data sources: World Bank and the Freedom and Prosperity Center (Atlantic Council)"
+    "text": "Average Index vs. Net Migration in 2023, coloured by region",
+     "subtitle": ["Average index calculated as the average of the Freedom and Prosperity Indexes for each country","Data sources: World Bank and the Freedom and Prosperity Center (Atlantic Council)"]
   },
-  "mark": {"type": "circle", "opacity": 1},
+  "mark": {
+    "type": "circle",
+    "opacity": 1
+  },
   "transform": [
     {"filter": "datum['Year'] == 2023"},
-    {"filter": "datum['Freedom_Index'] != null && datum['Value'] != null"}
+    {"filter": "datum['Freedom_Index'] != null && datum['Value'] != null"},
+    {
+      "calculate": "((datum['Freedom_Index'] + datum['Prosperity_Index']) / 2)",
+      "as": "Average"
+    }
   ],
-  "selection": {"grid": {"type": "interval", "bind": "scales"}},
+  "selection": {
+    "grid": {
+      "type": "interval",
+      "bind": "scales"
+    }
+  },
   "encoding": {
     "y": {
-      "field": "Freedom_Index",
+      "field": "Average",  // Use the new calculated "Average" field for the Y-axis
       "type": "quantitative",
-      "scale": {"domain": [0, 100]},
-      "axis": {"title": "Freedom Index"}
+      "scale": {
+        "domain": [0, 100]
+      },
+      "axis": {
+        "title": "Average Index"
+      }
     },
     "x": {
       "field": "Value",
       "type": "quantitative",
-      "axis": {"title": "Net Migration"}
+      "axis": {
+        "title": "Net Migration"
+      }
     },
     "color": {
       "field": "Region",
       "type": "nominal",
-      "legend": {"title": "Region"},
+      "legend": {
+        "title": "Region"
+      },
       "scale": {
         "range": [
           "#154084",
@@ -47,9 +75,9 @@
     "tooltip": [
       {"field": "Country Name", "type": "nominal", "title": "Country"},
       {
-        "field": "Freedom_Index",
+        "field": "Average",  // Display the new "Average" field in the tooltip
         "type": "quantitative",
-        "title": "Freedom Index",
+        "title": "Average Index",
         "format": ".3g"
       },
       {
@@ -61,7 +89,11 @@
     ]
   },
   "config": {
-    "axis": {"labelFontSize": 12, "titleFontSize": 14},
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
     "background": "#EDEDED"
   }
 }
+
