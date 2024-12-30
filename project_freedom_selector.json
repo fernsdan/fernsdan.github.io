@@ -174,7 +174,7 @@
   ],
   "layer": [
     {
-      "mark": {"type": "line", "strokeWidth": 2.5, "opacity": 0.9},
+      "mark": {"type": "line", "strokeWidth": 2, "opacity": 0.9, "strokeDash": [10, 2]},
       "encoding": {
         "x": {"field": "Year", "type": "temporal", "title": null},
         "y": {
