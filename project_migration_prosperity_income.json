@@ -1,27 +1,44 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Prosperity Index vs. Net Migrationin 2023",
+  "description": "Average Index vs. Net Migration in 2023",
   "data": {
-    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/migration_prosperity.csv"
+    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/migration_prosperity.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Prosperity_Index": "number",  // Parse Prosperity_Index as a number
+        "Freedom_Index": "number",     // Parse Freedom_Index as a number
+        "Value": "number"              // Parse Value (Net Migration) as a number
+      }
+    }
   },
   "height": 400,
   "width": 600,
   "title": {
-    "text": "Prosperity Index vs. Net Migration in 2023, filtered by GDP per capita",
-    "subtitle": "Data sources: World Bank and the Freedom and Prosperity Center (Atlantic Council)"
+    "text": "Average Index vs. Net Migration in 2023, filtered by GDP per capita",
+    "subtitle": ["Average index calculated as the average of the Freedom and Prosperity Indexes for each country","Data sources: World Bank and the Freedom and Prosperity Center (Atlantic Council)"]
   },
   "mark": "circle",
   "transform": [
     {"filter": "datum['Year'] == 2023"},
-    {"filter": "datum['Prosperity_Index'] != null && datum['Value'] != null"}
+    {"filter": "datum['Prosperity_Index'] != null && datum['Value'] != null"},
+    {
+      "calculate": "((datum['Prosperity_Index'] + datum['Freedom_Index']) / 2)",
+      "as": "Average"
+    }
   ],
-  "selection": {"grid": {"type": "interval", "bind": "scales"}},
+  "selection": {
+    "grid": {
+      "type": "interval",
+      "bind": "scales"
+    }
+  },
   "encoding": {
     "y": {
-      "field": "Prosperity_Index",
+      "field": "Average",  // Use the new calculated "Average" field for the Y-axis
       "type": "quantitative",
       "scale": {"domain": [0, 100]},
-      "axis": {"title": "Prosperity Index"}
+      "axis": {"title": "Average Index"}
     },
     "x": {
       "field": "Value",
@@ -39,15 +56,15 @@
           "Lower middle income",
           "Low income"
         ],
-        "range": ["#74A466","#154084","#dc4424", "#9D2719"]
+        "range": ["#74A466", "#154084", "#dc4424", "#9D2719"]
       }
     },
     "tooltip": [
       {"field": "Country Name", "type": "nominal", "title": "Country"},
       {
-        "field": "Prosperity_Index",
+        "field": "Average",  // Display the new "Average" field in the tooltip
         "type": "quantitative",
-        "title": "Prosperity Index",
+        "title": "Average Index",
         "format": ".3g"
       },
       {
@@ -56,7 +73,7 @@
         "title": "Net Migration",
         "format": ",.0f"
       },
-            {
+      {
         "field": "Income",
         "type": "quantitative",
         "title": "GDP per capita score",
@@ -64,5 +81,8 @@
       }
     ]
   },
-  "config": {"axis": {"labelFontSize": 12, "titleFontSize": 14}, "background": "#EDEDED"}
+  "config": {
+    "axis": {"labelFontSize": 12, "titleFontSize": 14},
+    "background": "#EDEDED"
+  }
 }
