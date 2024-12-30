@@ -38,7 +38,7 @@
   },
   "encoding": {
     "y": {
-      "field": "Average",  // Use the new calculated "Average" field for the Y-axis
+      "field": "Average", 
       "type": "quantitative",
       "scale": {
         "domain": [0, 100]
@@ -75,7 +75,7 @@
     "tooltip": [
       {"field": "Country Name", "type": "nominal", "title": "Country"},
       {
-        "field": "Average",  // Display the new "Average" field in the tooltip
+        "field": "Average",
         "type": "quantitative",
         "title": "Average Index",
         "format": ".3g"
