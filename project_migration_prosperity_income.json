@@ -6,9 +6,9 @@
     "format": {
       "type": "csv",
       "parse": {
-        "Prosperity_Index": "number",  // Parse Prosperity_Index as a number
-        "Freedom_Index": "number",     // Parse Freedom_Index as a number
-        "Value": "number"              // Parse Value (Net Migration) as a number
+        "Prosperity_Index": "number",  
+        "Freedom_Index": "number",    
+        "Value": "number"              
       }
     }
   },
