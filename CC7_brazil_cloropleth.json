@@ -2,8 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 300,
   "width": 400,
-  "title": "Population density of Brazil",
-  "subTitle": "Source: IBGE",
+  "title": "Population density of Brazil. Source: IBGE",
   "projection": {"type": "mercator"},
   "layer": [
     {
