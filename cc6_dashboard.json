@@ -1,0 +1,241 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "CPI Index dashboard",
+    "subtitle": "Source: ONS API. 2015 = 100",
+    "subtitleFontStyle": "italic"
+  },
+  "width": 700,
+  "height": 500,
+  "config": {"background": "#EDEDED"},
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_first_d7da.json",
+            "format": {"property": "years"}
+          },
+          "title": "Fruit",
+          "mark": {"type": "line", "color": "#154084"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_d7db.json",
+            "format": {"property": "years"}
+          },
+          "title": ["Vegetables (including potatoes", "and other tubers)"],
+          "mark": {"type": "line", "color": "#154084"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_d7dc.json",
+            "format": {"property": "years"}
+          },
+          "title": ["Sugar, jam, honey, syrups", "chocolate & confectionery"],
+          "mark": {"type": "line", "color": "#154084"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_d7dd.json",
+            "format": {"property": "years"}
+          },
+          "title": "Food products",
+          "mark": {"type": "line", "color": "#9D2719"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_d7de.json",
+            "format": {"property": "years"}
+          },
+          "title": "Coffee, tea, cocoa",
+          "mark": {"type": "line", "color": "#9D2719"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_d7df.json",
+            "format": {"property": "years"}
+          },
+          "title": ["Mineral waters, juices and", "soft drinks"],
+          "mark": {"type": "line", "color": "#9D2719"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_d7dg.json",
+            "format": {"property": "years"}
+          },
+          "title": "Spirits",
+          "mark": {"type": "line", "color": "#D7B418"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_d7dh.json",
+            "format": {"property": "years"}
+          },
+          "title": "Wine",
+          "mark": {"type": "line", "color": "#D7B418"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/cc6_d7di.json",
+            "format": {"property": "years"}
+          },
+          "title": "Beer",
+          "mark": {"type": "line", "color": "#D7B418"},
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {"title": "", "grid": false}
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {"title": "", "grid": false}
+            },
+            "tooltip": [
+              {"field": "value", "type": "quantitative", "title": "CPI Index"},
+              {"field": "date", "type": "temporal", "title": "Year"}
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
