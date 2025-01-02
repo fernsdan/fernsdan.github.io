@@ -22,12 +22,12 @@
             "x": {
               "field": "date",
               "type": "temporal",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, 
             },
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
@@ -51,7 +51,7 @@
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
@@ -75,7 +75,7 @@
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
@@ -103,7 +103,7 @@
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
@@ -127,7 +127,7 @@
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
@@ -151,7 +151,7 @@
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
@@ -179,7 +179,7 @@
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
@@ -203,7 +203,7 @@
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
@@ -227,7 +227,7 @@
             "y": {
               "field": "value",
               "type": "quantitative",
-              "axis": {"title": "", "grid": false}
+              "axis": {"title": "", "grid": false}, "scale": {"domain": [0, 150]
             },
             "tooltip": [
               {"field": "value", "type": "quantitative", "title": "CPI Index"},
