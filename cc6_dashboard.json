@@ -5,6 +5,9 @@
     "subtitle": "Source: ONS API. 2015 = 100",
     "subtitleFontStyle": "italic"
   },
+
+"width":500,
+"height":900,
  
   "config": {"background": "#EDEDED"},
   "vconcat": [
