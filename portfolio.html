@@ -150,9 +150,9 @@
             <section>
         <div class="chart-description">
             <h2>CC6: Loops</h2>
-            <p>TKTK </p>
+            <p>Dashboard built with series from the ONS. I added a tooltip to each of them. The Google Colab I used for this is <a href="https://colab.research.google.com/drive/1FoZBeK6esIKvgSUK8AvthXDwJdlu4fSn?usp=sharing">here</a>. </p>
        
-
+<figure id="Dashboard"></figure>
             
         </div>
     </section>
@@ -227,6 +227,7 @@
         let figure_7_spec = "CC4_bbc_recreation.json";
         let figure_8_spec = "CC4_bbc_better.json";
         let figure_9_spec = "cc5_chart_line.json";
+        let figure_10_spec = "cc6_dashboard.json";
         let figure_11_spec = "CC7_brazil_basemap.json";
         let figure_12_spec = "CC7_brazil_cloropleth.json";
         let figure_13_spec = "cc8_butter_imported.json";
@@ -235,7 +236,7 @@
         let figure_16_spec = "project_migration_prosperity_income.json";
         let figure_17_spec = "cc10_chart1.json";
         let figure_18_spec = "project_freedom_selector.json"
-
+        
         
 
                                                                                                                     // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
@@ -256,6 +257,7 @@
         vegaEmbed('#BBC_original',figure_7_spec)
         vegaEmbed('#BBC_better',figure_8_spec)
         vegaEmbed('#WikiGraph1',figure_9_spec)
+        vegaEmbed ('Dashboard',figure_10_spec)
         vegaEmbed('#Brazil1',figure_11_spec)
         vegaEmbed('#Brazil2',figure_12_spec)
         vegaEmbed('#Butter1',figure_13_spec)
@@ -264,6 +266,7 @@
         vegaEmbed('#Project2',figure_16_spec)
         vegaEmbed('#CC10_1',figure_17_spec)
         vegaEmbed('#CC10_2',figure_18_spec)
+
 
 
     </script>
