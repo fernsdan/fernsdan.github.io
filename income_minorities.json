@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Income and protection for minorities",
+  "title": {
+    "text": "Income and well-being of minority groups",
+    "subtitle": [
+      "Measured by index scores (higher scores mean less inequality",
+      "and less discrimination, respectively).",
+      "Source: Atlantic Council"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/fernsdan/fernsdan.github.io/refs/heads/main/income_prosperity_merged.csv"
+  },
+  "height": 400,
+  "width": 400,
+  "layer": [
+    {
+      "mark": {"type": "circle", "color": "#D7B418", "size": 100},
+      "encoding": {
+        "y": {
+          "field": "Income",
+          "type": "quantitative",
+          "title": "Income inequality score",
+          "scale": {"domain": [0, 100]}
+        },
+        "x": {
+          "field": "Minorities",
+          "type": "quantitative",
+          "title": "'Minorities' score",
+          "scale": {"domain": [0, 100]}
+        },
+        "tooltip": [
+          {"field": "Country Name", "type": "nominal", "title": "Country"},
+          {
+            "field": "Income",
+            "type": "quantitative",
+            "title": "Income score",
+            "format": ".3g"
+          },
+          {
+            "field": "Minorities",
+            "type": "quantitative",
+            "title": "'Minorities' score",
+            "format": ".3g"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "#222222"},
+      "transform": [{"regression": "Income", "on": "Minorities"}],
+      "encoding": {
+        "y": {"field": "Income", "type": "quantitative"},
+        "x": {"field": "Minorities", "type": "quantitative"}
+      }
+    }
+  ],
+  "transform": [{"filter": "datum['Year'] == selectedYear"}],
+  "params": [
+    {
+      "name": "selectedYear",
+      "value": 2023,
+      "bind": {
+        "input": "select",
+        "options": [
+          1996,
+          1997,
+          1998,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ],
+        "name": "Select Year: "
+      }
+    }
+  ],
+  "config": {"background": "#EDEDED"}
+}
