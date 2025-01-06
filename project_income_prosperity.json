@@ -3,7 +3,7 @@
   "description": "Income and the freedom index",
   "title": {
     "text": "Income and the Freedom Index",
-    "subtitle": ["Freedom Index and GDP per capita by country (in current US$).", "Source: World Bank, Atlantic Council"],
+    "subtitle": ["Freedom Index and GDP per capita by country (in constant 2021 US$).", "Source: World Bank, Atlantic Council"],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
