@@ -76,6 +76,17 @@
         <figure id="project4"></figure>
 </div>
 
+
+                    <div class="chart-description">
+            <h2>Bridging indexes</h2>
+            <p>For the final chart, I wanted to investigate a relationship across measures of each chart. I continued with income, from the Prosperity Index, and chose the Minorities component from the Freedom Index. Unsurprisingly, the two have a consistently positive correlation across the years in the data:</p>
+        
+
+        <figure id="project6"></figure>
+            
+
+</div>
+
             <div class="chart-description">
             <h2>Data: sources and challenges</h2>
             <p>As noted in each graph, the data I used came from The Atlantic Council's <a href="https://freedom-and-prosperity-indexes.atlanticcouncil.org/about">Freedom and Prosperity Center</a>, and the World Bank for <a href="https://data.worldbank.org/indicator/SM.POP.NETM">net migration</a> and historical data for <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD">GDP per capita</a>. My main challenge was working with Python on Colab to <a href="https://colab.research.google.com/drive/1-aVml5KsqyBaRd_Jwy_O-TlcWkmdFBso?usp=sharing">format the datasets and merge them</a> correctly. It took a few tries, many typo fixes and rewriting the data in the format that Vega could actually work to <a href="https://colab.research.google.com/drive/1dU9yU_wQFwVYeEKNfYapitFK_T8wwZRi?usp=sharing">debug</a> the code.</p>
@@ -85,7 +96,7 @@
 
                         <div class="chart-description">
             <h2>Conclusions</h2>
-            <p>TK TK.</p>
+            <p>While the information here is not robust enough to make any definitive claims, TKTK.</p>
         
 </div>
 
@@ -104,12 +115,14 @@
         let figure_3_spec = "project_migration_region.json";
         let figure_4_spec = "project_migration_prosperity_income.json";
         let figure_5_spec = "project_income_prosperity.json";
+        let figure_6_spec = "income_minotirities.json"
 
         vegaEmbed('#project1', figure_1_spec)
         vegaEmbed('#project2', figure_2_spec)
         vegaEmbed('#project3', figure_3_spec)
         vegaEmbed('#project4', figure_4_spec)  
-        vegaEmbed('#project5', figure_5_spec)  
+        vegaEmbed('#project5', figure_5_spec)
+        vegaEmbed('#project6', figure_6_spec)
 
 
 
